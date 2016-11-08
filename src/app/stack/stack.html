@@ -1,0 +1,27 @@
+<main class="stack">
+  <div>
+  <acme-navbar></acme-navbar>
+</div>
+<section id="stack" class="jumbotron text-center bg"></section>
+<div class="container">
+  <div class="row">
+    <div style="position: relative;text-align: center;height: 100%; margin-bottom: 10rem;"> <h1 class="lead">
+      <code>{ stack }</code>
+    </h1>
+      <p class="lead">
+        These are the tools I used to create this site
+      </p>
+    </div>
+    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in stack.awesomeThings | orderBy:'rank'">
+      <div class="stack thumbnail">
+        <img class="text-center" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
+        <div class="caption">
+          <h3>{{ awesomeThing.title }}</h3>
+          <p>{{ awesomeThing.description }}</p>
+          <!--<p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
